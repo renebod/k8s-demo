@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 #It will install the framework and the dependencies in the `requirements.txt` file in our Docker image and container
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 #It will cleanup the requirements file
 RUN rm requirements.txt

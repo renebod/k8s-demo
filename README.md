@@ -16,3 +16,5 @@ journalctl -u rke2-server -f
 alias k='sudo /var/lib/rancher/rke2/bin/kubectl --kubeconfig /etc/rancher/rke2/rke2.yaml'
 alias k9s='sudo k9s --kubeconfig /etc/rancher/rke2/rke2.yaml'
 
+k -n kitchensink apply -f kubernetes.yaml
+k -n kitchensink logs -f --selector app=fastapi
