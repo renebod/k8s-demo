@@ -3,9 +3,8 @@
 ## build image and send to docker hub
 sudo usermod -aG docker $USER
 docker login
-docker image build -t renebod/fastapi .
-docker image tag xxx renebod/fastapi:v1
-docker push renebod/fastapi:v1
+docker image build -t renebod/fastapi:v2 .
+docker push renebod/fastapi:v2
 
 ## install rke2
 curl -sfL https://get.rke2.io | sudo sh -
