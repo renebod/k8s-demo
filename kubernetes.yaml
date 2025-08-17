@@ -14,13 +14,14 @@ spec:
     spec:
       containers:
         - name: fastapi
-          image: renebod/fastapi:v1
+          image: renebod/fastapi:v2
           resources:
             limits:
               memory: "256Mi"
               cpu: "500m"
           ports:
             - containerPort: 8000
+          imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
